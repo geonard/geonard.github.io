@@ -1,0 +1,143 @@
+:root {
+    --space-row:70px;
+    --w-input: 200px;
+    --h-input: 50px; /* Hauteur standard des inputs */
+    --space-row: 15px; /* Espace entre les lignes */
+    --w-message:250px;
+    --h-message: calc(var(--h-input) + var(--space-row) + var(--h-input) + var(--space-row) + 30px);
+
+}
+*{
+  font-family:"MontSerrat";
+  font-size: 1em;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h1 {
+    font-size: 1.5em;
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+.no-scroll-iframe {
+    overflow: hidden;
+    width: 100%;  
+    height: 100%; 
+    border: none; /* Remove border if needed */
+}
+
+body {
+    position:relative;
+}
+.container-fluid {
+    width:100%;
+}
+.conteneur {
+    position:absolute;
+    top:300px;
+    height:500px;
+    padding-left:150px;
+    display: flex;
+    margin-top:600px;
+    margin-left:400px;
+    background-color:white;
+    border: 1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width:1000px;
+
+    flex-flow: column wrap;
+    justify-content:center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.custom-navbar .navbar {
+    width: 100%;}
+.custom-margin {
+    margin-top:70px;
+}
+.custom-margin .form-control {
+    margin-bottom: 15px; /* Adjust the value as needed */
+}
+
+.form-title {
+    text-align: left;
+    margin-bottom: 10px; /* Espace sous le titre */
+    font-size:30px;
+    font-weight: bold;
+    color:var(--noir);
+}
+.space-row {
+    height:var(--space-row);
+}
+.spaced-input {
+    margin-bottom: 45px;
+}
+label {
+    font-size:20px;
+}
+.submit-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+.nom, .prenom, .email, .telephone {
+    background-color:rgb(241, 235, 235);
+    width:var(--w-input);
+    height:var(--h-input);
+    color:red;
+}
+.image-container {
+    position: relative;
+    height: 50vh; /* 50% of the viewport height */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+.message { 
+    background-color:rgb(241, 235, 235);
+    width: var(--w-message);
+    height: var(--h-message);
+}    
+button[type="submit"]  {
+    background:rgb(88, 163, 237); 
+    color:white; 
+    width:170px; 
+    height:50px;
+}
+
+@media screen and (min-width: 980px){
+    textarea {width:200px;}
+}
+@media screen and (min-width: 767px){
+    body {width:100; margin-left:5px;}
+    .container-fluid, .conteneur {
+        width:100%;
+        margin-left:5px;
+        left:0;
+    }
+
+    .prenom {
+        grid-column: 1 / 2;
+    }
+    .nom {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .message {
+        grid-column: 3 / 3;
+        grid-row: 1 / 3;
+    }
+    .email {
+        grid-column : 2 / 3;
+    }
+    .telephone {
+        grid-column : 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
+

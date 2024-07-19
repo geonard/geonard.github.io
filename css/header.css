@@ -1,0 +1,101 @@
+:root {
+--height-header: 190px;
+
+--noir: #232628; 
+}
+h1  {
+    font-size: 30px;
+    color: var(--blanc);
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "MontSerrat";
+    display: flex;
+    align-items: center; /* Centrer le contenu verticalement */
+  }
+h2 { font-size:25px;color:var(--orange-entete); }
+h3 { font-size:17px; color:var(--blanc);}
+h4 { font-size:20px; color:var(--blanc); font-weight: bold;}
+h5 { font-size:5px; color:var(--orange-noir);}
+/* Style for header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: var(--height-header);
+    margin: 0;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    color:white;
+    background-color:var(--noir);
+  }
+  header td {
+    background: var(--noir);
+    color:var(--blanc);
+  }
+  
+  header h1 {
+      font-size: 30px;
+  }
+.col-club {
+  width:30px;
+}
+  .col-club h1 {
+
+  }    
+  .col-address {
+
+  }
+  .col-address h2 {
+
+  }
+  .col-address h3 {
+
+  }
+  .address-text {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center; /* Centre le texte verticalement dans la colonne */
+}
+
+/* Styles pour les détails de l'adresse */
+.address-details {
+    display: flex;
+    flex-direction: column; /* Aligne les lignes d'adresse en colonne */
+}
+  .col-phone {
+
+  }
+  .col-phone h2 {
+
+  }
+  .col-phone h3 {
+
+  }
+  .col-ouverture {
+  
+  }
+  .col-ouverture h2 {
+
+  }
+  .col-ouverture h3 { 
+
+  }
+  .col-gafam {
+
+    
+  }
+  .contact-table {
+    border-collapse: collapse; /* Ensure borders collapse to remove default spacing */
+    border-spacing: 0; /* Remove spacing between table cells */
+  }
+  
+  .contact-table td {
+    padding: 43px; /* Adjust padding as needed to reduce space between cells */
+  }
+  
+  /* Optionally, adjust padding for specific cells if needed */
+  .contact-table td[valign="top"] {
+    padding: 5px; /* Adjust padding for top-aligned cells */
+  }
+  .iconContacts{ height:50px; width:50px;}
+  .iconGAFAM{ height:30px; width:30px;}
