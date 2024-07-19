@@ -1,4 +1,12 @@
 {
+  "name": "c3",
+  "version": "1.0.0",
+  "description": "dee",
+  "main": "index.js",
+  "scripts": {
+    "test": "test c4",
+    "build": "webpack --mode production"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "flex-box-grid": "^1.0.0",
@@ -6,22 +14,17 @@
     "saas": "^1.0.0",
     "scss": "^0.2.4"
   },
-  "name": "c3",
-  "description": "dee",
-  "version": "1.0.0",
-  "main": "index.js",
   "devDependencies": {
-    "sass": "^1.77.8",
-    "sass-loader": "^14.2.1",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
-  },
-  "scripts": {
-    "test": "test c4"
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "sass-loader": "^12.0.0",
+    "sass": "^1.32.0",
+    "style-loader": "^3.0.0",
+    "css-loader": "^6.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "C4"
+    "url": "https://github.com/geonard/C3.git"
   },
   "keywords": [
     "geo"

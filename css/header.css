@@ -1,6 +1,4 @@
 :root {
---height-header: 190px;
-
 --noir: #232628; 
 }
 h1  {
@@ -33,30 +31,27 @@ header {
     color:var(--blanc);
   }
   
-  header h1 {
-      font-size: 30px;
-  }
+
 .col-club {
-  width:30px;
+  font-size: 30px;
 }
-  .col-club h1 {
+.col-club h1 {
 
-  }    
-  .col-address {
+}    
+.col-address {
 
-  }
-  .col-address h2 {
-
-  }
-  .col-address h3 {
-
-  }
-  .address-text {
-    display: flex;
-    flex-direction: column; /* Aligne les éléments en colonne */
-    justify-content: center; /* Centre le texte verticalement dans la colonne */
 }
+.col-address h2 {
 
+}
+.col-address h3 {
+
+}
+.address-text {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments en colonne */
+  justify-content: center; /* Centre le texte verticalement dans la colonne */
+}
 /* Styles pour les détails de l'adresse */
 .address-details {
     display: flex;
@@ -83,19 +78,6 @@ header {
   .col-gafam {
 
     
-  }
-  .contact-table {
-    border-collapse: collapse; /* Ensure borders collapse to remove default spacing */
-    border-spacing: 0; /* Remove spacing between table cells */
-  }
-  
-  .contact-table td {
-    padding: 43px; /* Adjust padding as needed to reduce space between cells */
-  }
-  
-  /* Optionally, adjust padding for specific cells if needed */
-  .contact-table td[valign="top"] {
-    padding: 5px; /* Adjust padding for top-aligned cells */
   }
   .iconContacts{ height:50px; width:50px;}
   .iconGAFAM{ height:30px; width:30px;}

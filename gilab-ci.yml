@@ -1,0 +1,66 @@
+stages:
+  - build
+  - test
+  - deploy
+
+# Job pour la construction
+build-job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+# Job pour les tests
+test-job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - npm test
+
+# Job pour le déploiement
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+    - ./deploy.sh
+  only:
+    - main  # Déploie uniquement depuis la branche principale
+
+stages:
+  - build
+  - test
+  - deploy
+
+# Job pour la construction
+build-job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+# Job pour les tests
+test-job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - npm test
+
+# Job pour le déploiement en production
+deploy-prod:
+  stage: deploy
+  script:
+    - echo "Deploying to production..."
+    - ./deploy-prod.sh
+  environment:
+    name: production
+    url: https://example.com
+  only:
+    - main

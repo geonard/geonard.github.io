@@ -127,14 +127,12 @@
   /* Centrer l'image horizontalement */
 }
 
-html {
- position: relative;
- margin-left:70px;
- margin-right:70px;
-}
 .bg-blue-light-opacity {
   background-color: rgba(173, 216, 230, 0.7); /* light blue with 70% opacity */
 }
+html {
+  margin-left:0 5px 0 5px;
+ }
 .container-fluid {
 width: 100%;
 padding: 0 15px; /* Ajustez le padding pour éviter le débordement */
@@ -142,6 +140,7 @@ margin: 0 auto;
 }
 .custom-navbar {
   position: fixed;
+  width:100%;
   top: var(--top-a1_menu);
   z-index: 10000; /* Ensure the navbar is above other content */
 }
@@ -150,12 +149,11 @@ margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
-  width:700px;
   height: 60px; /* Adjust the height as needed */
 }
 .custom-navbar .navbar-brand {
   color: red; /* Color of the brand text */
-  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-size: 2rem; /* Adjust the font size as needed */
   font-weight: bold;
 }
 .custom-navbar .navbar-nav {
@@ -165,6 +163,7 @@ margin: 0 auto;
   margin-right: 10px; /* Adjust the spacing between nav items */
 }
 .custom-navbar .navbar-nav .nav-link {
+  width:100%;
   color:black; /* Color of the nav links */
   font-size: 1rem; /* Adjust the font size as needed */
   font-weight:bold;
@@ -174,9 +173,9 @@ margin: 0 auto;
 }
 #navbarSupportedContent {width:100%;}
 .a1_menu {
-    position: relative;
+  margin-right:0;
     width:100%;
-    margin-top: calc(var(--h-header)); 
+    margin-top: var(--h-header); 
 }
 .a1_menu a {
     vertical-align: top;
@@ -231,22 +230,19 @@ margin: 0 auto;
 }
 
 .a4_chapeau {
+  position:relative;
   display: block;
   max-width: 100%;
   height: auto;
 }
-
 .a4_chapeau_text_1, .a4_chapeau_text_2 {
   margin-top: -var(--h-a4_chapeau);
-  /*position: absolute; /* Utilisez relative pour que les éléments se comportent en fonction de leur conteneur */
   width:var(--w-a4_chapeau_text_2);
   height:var(--h-a4_chapeau_text_2);
   padding: 20px;
-  margin-top: 30px; /* Ajustez selon vos besoins */
   color: white;
   font-size: 16px;
 }
-
 .a4_chapeau_text_1, .a4_chapeau_text_2 {
   margin-bottom: 10px;
 }
@@ -256,18 +252,18 @@ margin: 0 auto;
   color: black;
 }
 .a4_chapeau_text_1 {
-  left:var(--w-a4_chapeau_text_1);
+  left:var(--l-a4_chapeau_text_1);
   background-color: var(--orange); /* Utilisation d'une variable CSS personnalisée */
 }
 .a4_chapeau_text_2 {
-  left:var(--w-a4_chapeau_text_2);
+  left:var(--l-a4_chapeau_text_2);
   background-color: var(--rouge); /* Utilisation d'une variable CSS personnalisée */
 }
-.a4-lorem {
-  font-size: 14px;
+.a4-lorem, .a3-lorem .a6-lorem, .a8-lorem {
+  font-size: 17px;
   line-height: 1.6;
 }
-
+.a6-lorem {color:red;}
 .a5_veh_rec {
   position: relative;
   vertical-align: top;
@@ -361,25 +357,24 @@ margin: 0 auto;
   color:black;
 }
 .second-words div:nth-child(2) {
-    font-size: 1vw;
-    color: white;
-}
-.text-a6_nous_choisir h1 {
-  font-size:40px;
-  font-weight: bold;
-  text-align: center;
-  color:black;
+  font-size: 1vw;
+  color: white;
 }
  .a6_nous_choisir {
   position:relative;
   text-align:center;
-   vertical-align: top;
-   background-color:white;
-   height:auto;
+  vertical-align: top;
+  background-color:white;
+  height:auto;
  }
-
-.a6_nous_choisir h2 {
-  margin-left: 50px;
+ .a6_nous_choisir h1 {
+  font-size:30px;
+  font-weight: bold;
+  text-align: center;
+  color:red;
+}
+.a6_nous_choisir div h2 {
+  margin-left: 30px;
   text-align: start;
   font-size: 25px;
   font-weight: bold;
@@ -387,7 +382,7 @@ margin: 0 auto;
   color:black;
 }
 
-.a6_nous_choisir h3 {
+.a6_nous_choisir div h3 {
   font-size: 1vw;
   color:var(--gris);
 }
@@ -485,6 +480,9 @@ footer {
 
 /* Ajustez le titre en fonction de la taille de l'écran */
 @media (max-width: 767px) {
+  html, .container-fluid, body  {
+    margin-left:0 5px 0 5px;
+   }
   .title-veh_rec {
       font-size: 1.5rem; /* Réduit la taille du texte pour les petits écrans */
       margin-bottom: 20px; /* Ajuste l'espacement sous le titre */

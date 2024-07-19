@@ -152,9 +152,8 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
   
-
 <div class="space-between-sections"></div>
 
 <section class="container-fluid m-t3 a5_veh_rec"><!-- *********************************************   veh_rec  ******************************************************************************  -->
@@ -200,7 +199,7 @@
 
 <div class="space-between-sections"></div>
 
-<section class="container-fluid text-a6_nous_choisir"><!-- ******************************************  Pourquoi nous choisir ?  ********************************************************************  -->
+<section class="container-fluid a6_nous_choisir"><!-- ******************************************  Pourquoi nous choisir ?  ********************************************************************  -->
         <div class="row">
             <div class="col-12">
                 <h1>Pourquoi nous choisir ?</h1>
@@ -220,12 +219,14 @@
                     Non unde quod quas!
                 </h3>
             </div>
-            
+
+            <div class="row">
+                <div class="col-12 col-md-3"></div>
             <div class="col-12 col-md-3">
                 <p style="float:left;"><img src="images/icon2.png" width="50%" class="icon-nous-choisir img-fluid"></p>
                 <h2>R&#xC9;ACTIVIT&#xC9; DE
                     L&rsquo;&#xC9;QUIPE TECHNIQUE</h2>
-                <h3 a6-lorem>Lorem ipsum dolor sit amet consectetur
+                <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus.
                     Non unde quod quas!
                 </h3>
@@ -234,7 +235,7 @@
             <div class="col-12 col-md-3">
                 <p style="float:left;"><img src="images/icon3.png" width="50%" class="icon-nous-choisir îmg-fluid" /></p>
                 <h2>A L&rsquo;&#xC9;COUTE DE NOTRE CLIENT&Egrave;LE</h2>
-                <h3 a6-lorem>Lorem ipsum dolor sit amet consectetur
+                <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus.
                     Non unde quod quas!
                 </h3>
@@ -243,12 +244,12 @@
             <div class="col-12 col-md-3">
                 <p style="float:left;"><img src="images/icon4.png" width="50%" class="icon-nous-choisir  img-fluid"></p>
                 <h2>SERVICE & MAINTENANCE</h2>
-                <h3 a6-lorem>Lorem ipsum dolor sit amet consectetur
+                <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus.
                     Non unde quod quas!
                 </h3>
             </div>
-
+            <div class="col-12 col-md-3"></div>
         </div>
 
     
@@ -336,6 +337,20 @@
 
 </section>
 
+<script>
+        window.onload = function() {
+            // Sélectionner l'élément header
+            const header = document.querySelector('header');
+
+            // Obtenir la hauteur de l'élément header
+            const headerHeight = header.offsetHeight;
+
+            // Définir la variable CSS avec la hauteur du header
+            document.documentElement.style.setProperty('--h-header', `${headerHeight}px`);
+
+            // Afficher la hauteur dans une alerte alert(`Hauteur du header: ${headerHeight}px`);
+        };
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybII0nDmx5K7bB2jsyD6A5Vr0b1PsvxWAWl3hBU5QKPx62K3C" crossorigin="anonymous"></script>
