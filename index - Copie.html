@@ -24,9 +24,7 @@
 <body>
 
 <header class="container-fluid d-none d-md-block">
-    <iframe id="footer-iframe" src="footer.html" style="width: 100%; border: none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
-
-<!--<iframe src="./header.html" width="100%" frameborder="0" scrolling="no"></iframe> -->
+<iframe src="./header.html" width="100%" frameborder="0" scrolling="no"></iframe> 
 </header>
 
 
@@ -70,7 +68,7 @@
 <section class="container-fluid a3_entretien_clients">
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-5 mb-5">
+        <div class="col-md-5">
             <img src="images/clients.jpg" width="100%" class="img-fluid mx-auto d-block" />
         </div>
         <div class="col-md-5">
@@ -129,14 +127,10 @@
 
 <section class="container-fluid a4_chapeau">
     <div class="row">
-        <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="img-a4_chapeau">
           <img src="images/chapeau.png" width="100%" class="img-fluid mx-auto d-block" />
-        </div>
-    </div>
-</section>
-
-
-<section class="a4_chapeau_text_1">
+          <div class="a4_chapeau_text_1">
             <h1>Vous souhaitez louer ?</h1>
             <p class="lead a4-lorem">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur
@@ -145,9 +139,8 @@
               elit. Vero consequuntur ducimus distinctio
             </p>
           </div>
-</section>
 
-<section class="a4_chapeau_text_2">
+          <div class="a4_chapeau_text_2">
             <h1>Vous souhaitez acheter ?</h1>
             <p class="lead a4-lorem">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur
@@ -155,6 +148,10 @@
               consequuntur ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing
               elit. Vero consequuntur ducimus distinctio
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
   
 <div class="space-between-sections"></div>
@@ -215,7 +212,7 @@
 <section class="container-fluid a6_nous_choisir">
         <div class="row">
             <div class="col-12 col-md-3">
-                <p style="float:left;"><img src="images/icon1.png" width="50%" class="icon-nous-choisir img-fluid"></p>
+                <p style="float:left;"><img src="images/icon1.png" width="50%" class="icon-nous-choisir  img-fluid"></p>
                 <h2>FINANCEMENT</h2>
                 <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus.
@@ -243,7 +240,7 @@
                     Non unde quod quas!
                 </h3>
             </div>
-            
+
             <div class="col-12 col-md-3">
                 <p style="float:left;"><img src="images/icon4.png" width="50%" class="icon-nous-choisir  img-fluid"></p>
                 <h2>SERVICE & MAINTENANCE</h2>
@@ -283,7 +280,8 @@
 
 <div class="space-between-sections"></div>
 
-<footer class="container-fluid text-center text-md-start mt-5">
+<footer><!-- **************************************************************** Footer ****************************************************************************** -->
+    <div class="container-fluid text-center text-md-start mt-5">
         <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                 <h6 class="mb-4"><span style="color: blue;">CLUB&nbsp;</span>
@@ -337,12 +335,6 @@
 
 </footer>
 
-
-<footer class="container-fluid text-center text-md-start mt-5">
-    <iframe id="footer-iframe" src="footer.html" style="width: 100%; height:100%;border: none;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
-
-
-</footer>
 </section>
 
 <script>
@@ -358,12 +350,7 @@
 
             // Afficher la hauteur dans une alerte alert(`Hauteur du header: ${headerHeight}px`);
         };
-
-        function resizeIframe(iframe) {
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-        }
 </script>
-
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybII0nDmx5K7bB2jsyD6A5Vr0b1PsvxWAWl3hBU5QKPx62K3C" crossorigin="anonymous"></script>
