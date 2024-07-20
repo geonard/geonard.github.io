@@ -8,29 +8,11 @@
 
 C:.
 
-├───.vscode
-
 ├───css
 
 ├───images
 
-├───js
-
-├───Montserrat,Open_Sans
-
-│   ├───Montserrat
-
-│   │   └───static
-
-│   └───Open_Sans
-
-│       └───static
-
-├───Open_Sans (1)
-
-│   └───static
-
-└───scss
+├───docs
 
 - .vscode
 - css
@@ -54,5 +36,5 @@ index.html
 Bootstrap
 
 # Documentation
-- [Fil rouge](docs/filRougeC3_Georges_LAMBERT.pdf)
+- [Lien hébergement](docs/filRougeC3_Georges_LAMBERT.pdf)
 
