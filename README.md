@@ -1,9 +1,8 @@
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Documentation](#documentation)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
+- [Architecture](#Architecture)
+- [Lancement Appli](#Lancement Appli)
+- [Framework](#Framework)
+- [Documentation](#Documentation)
+
 
 # Architecture
 
@@ -33,23 +32,20 @@ C:.
 
 └───scss
 
-
 - .vscode
 - css
-images
-js
-Montserrat,Open_Sans
-Open_Sans (1)
-scss
-contact.html
-footer.html
-header.html
-index.html
-package-lock.json
-package.json
-README.md
-vehicules-details.html
-webpack.config.js
+- images
+- js
+- scss
+- contact.html
+- footer.html
+- header.html
+- index.html
+- package-lock.json
+- package.json
+- README.md
+- vehicules-details.html
+- webpack.config.js
 
 # Lancement Appli
 index.html
