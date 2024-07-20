@@ -31,10 +31,11 @@ C:.
 
 │   └───static
 
-└───scssdee
+└───scss
 
-.vscode
-css
+
+- .vscode
+- css
 images
 js
 Montserrat,Open_Sans
