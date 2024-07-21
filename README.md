@@ -5,15 +5,10 @@
 
 
 # Architecture
-
 C:.
-
 ├───css
-
 ├───images
-
 ├───docs
-
 - .vscode
 - css
 - images
