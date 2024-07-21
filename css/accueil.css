@@ -139,40 +139,7 @@ padding: 0; /* Ajustez le padding pour éviter le débordement */
 margin-left: 100px;
 margin-right: 100px;
 }
-.custom-navbar {
-  position: fixed;
-  width:100%;
-  top: var(--top-a1_menu);
-  z-index: 10000; /* Ensure the navbar is above other content */
-}
-.custom-navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-  height: 60px; /* Adjust the height as needed */
-}
-.custom-navbar .navbar-brand {
-  color: red; /* Color of the brand text */
-  font-size: 2rem; /* Adjust the font size as needed */
-  font-weight: bold;
-}
-.custom-navbar .navbar-nav {
-  flex-direction: row; /* Horizontal alignment of nav items */
-}
-.custom-navbar .navbar-nav .nav-item {
-  margin-right: 10px; /* Adjust the spacing between nav items */
-}
-.custom-navbar .navbar-nav .nav-link {
-  width:100%;
-  color:black; /* Color of the nav links */
-  font-size: 1rem; /* Adjust the font size as needed */
-  font-weight:bold;
-}
-.custom-navbar .navbar-nav .nav-link:hover {
-  color: #f8b400; /* Color of nav links on hover */
-}
-#navbarSupportedContent {width:100%;}
+
 .a1_menu {
     width:100%;
     margin-top: var(--h-header); 
@@ -311,6 +278,19 @@ margin-right: 100px;
 .promo-text div {
   font-weight:bold;
 }
+.first-column {
+  left:10px;
+}
+.second-column {
+  display: inline-block; /* Permet d'afficher les mots sur le premier mot  */
+  vertical-align: middle;/* Pour aligner verticalement par rapport au prmier mot */
+  background-color: var(--bleu);
+  color: white;
+  right:20px;
+}
+.second-column div:nth-child(1) {
+  text-decoration: line-through;/* barrer le mot */
+}
 .first-word {
   position:absolute;
   left:0;
@@ -323,36 +303,6 @@ margin-right: 100px;
   left:0;
   top:30px;
 }
-.second-words div {
-  display: block;
-  line-height:5px;
-}
-.second-words div:nth-child(1) {
-  font-size:0.5vw;
-  color:black;
-}
-.second-words div:nth-child(2) {
-  font-size: 1vw;
-  color: white;
-}
-.tab-words {
-  display: inline-block; /* Permet d'afficher les mots sur le premier mot  */
-  vertical-align: middle;/* Pour aligner verticalement par rapport au prmier mot */
-  border: 1px solif var(--bleu);
-  background-color: var(--bleu);
-  color: white;
-}
-.tabl-words div {
-  display: block;
-}
-.tab-words div:nth-child(1) {
-  display: block;
-  text-decoration: line-through;/* barrer le mot */
-}
-.tab-words div:nth-child(2) {
-  display: block;
-}
-
 
  .a6_nous_choisir {
   position:relative;
@@ -367,24 +317,22 @@ margin-right: 100px;
   text-align: center;
   color:black;
 }
-.a6_nous_choisir div h2 {
-
+.a6_nous_choisir div div h2 {
   text-align: start;
-  font-size: 17px;
+  font-size: 25px;
   font-weight: bold;
-  font-size:2.5vw;
-  color:black;
+  color:blue;
   text-align: center;
 }
-.a6_nous_choisir div h3 {
+.a6_nous_choisir div div h3 {
   font-size: 14px;
   color:var(--gris);
 }
+
 .a7_contact_nous {
   text-align: center; /* Centre le contenu à l'intérieur du conteneur */
   margin-bottom:5px;
 }
-
 .a7_contact_nous h1 {
   position: relative;
   border: 1px solid var(--bleu);
@@ -392,6 +340,7 @@ margin-right: 100px;
   border-radius: 5px;
   padding: 10px 20px; /* Ajustez les valeurs de padding selon vos besoins */
   font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+  font-weight:bold;
   background-color: blue;
   color: white;
   display: inline-block; /* Utilisez inline-block pour ajuster la taille de la bordure autour du texte */
@@ -454,22 +403,6 @@ footer {
 }
 
 
-.navbar-nav .nav-item .nav-link.active {
-  color: var(--orange); /* Change the active link color to orange */
-  font-weight: bold; /* Make the active link bold */
-}
-
-.navbar-toggler {
-  border: none; /* Remove border */
-  background-color: var(--blue); /* Set background color to blue */
-  position: absolute; /* Position it absolutely to move it to the right */
-  right: 10px; /* Adjust this value as needed */
-  top: 10px; /* Adjust this value as needed */
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
 
 /* Ajustez le titre en fonction de la taille de l'écran */
 @media (max-width: 767px) {
@@ -496,31 +429,6 @@ footer {
     display: none !important; /* Cela cache complètement le header, vérifiez si c'est votre intention */
 }
 
-.navbar {
-    position: fixed; /* Utilisation de fixed pour une navbar qui reste en haut de la page */
-    top: 0;
-    width: 100%; /* Assurez-vous que la navbar occupe toute la largeur */
-    display: flex; /* Utilisation de flex pour le positionnement vertical */
-    flex-direction: column; /* Empêche le comportement horizontal par défaut */
-    z-index: 1000; /* Assurez-vous que la navbar est au-dessus du contenu */
-}
-.nav-item {display:none !important;}
-.navbar-nav {
-    width: 100%; /* Assurez-vous que les éléments de la navbar occupent toute la largeur */
-    text-align: center; /* Centrez le texte à l'intérieur des éléments de la navbar */
-}
-.button.navbar-toggler {display: block !important;}
-.navbar-toggler {
-    display: block; /* Assurez-vous que le bouton de bascule est visible */
-}
-.navbar-nav .nav-item.active .nav-link {color:blue;}
-.collapse {
-    display: block !important; /* Assurez-vous que la collapse est visible */
-}
-
-.custom-navbar {
-
-}
 .custom-image {display:none;}
 .a3_entretiens {
     padding-top: 120px; /* Adjust to ensure it's not covered by the fixed navbar */
@@ -539,10 +447,11 @@ footer {
 .a3_entretien_clients h3 {
   margin-left:44px;
   margin-right:50px;}
-.a3-padding-text {
+.a3-mobile-text {
     position:absolute;
     top:0px;
-    padding-top: 120px; /* Align with .a3_entretiens padding */
+    padding-top: 200px; /* Align with .a3_entretiens padding */
+    height:300px;
     text-align: center; /* Center align text */
     font-size: 1.5em; /* Adjust font size as needed */
     color: #000; /* Adjust text color as needed */
@@ -551,30 +460,23 @@ footer {
 .a5_veh_rec {
 padding-top: 20px; /* Ajout d'un espace pour éviter le chevauchement */
 }
-.a6_.a6_nous_choisir div div h2 {
-  color:red;
+.a5_veh_rec h1 {
+  margin-left:130px;
+  font-size:30px;
+}
+.a6_nous_choisir div div h2 {
   font-size:2em;
   font-weight:bold;
 }
 .a6_nous_choisir div div h3 {
-  color:red;
-  font-size:1.5em;
+  color:black;
+  font-size:1em;
 }
-footer {
-   margin: 10px;
- }
-
-h1 { font-size: 50px;}
-h2 { font-size:50px;}
-h3 { font-size:17px;}
-h4 { font-size:11px;}
-h5 { font-size:25px; }
 
 .container-fluid img {
   width: 100%; /* Redimensionne les images pour s'adapter à la largeur de l'écran */
   height:auto;
 }
-
 .container-fluid {
   width: 100%;
   padding: 0 10px; /* Ajustez le padding pour éviter le débordement */

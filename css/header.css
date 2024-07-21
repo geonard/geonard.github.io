@@ -1,7 +1,11 @@
-:root {
---noir: #232628; 
+body html {
+  overflow-x: hidden;
 }
-h1  {
+.container-fluid {
+  margin-right: 50px !important;
+  margin-left: 50px !important;
+}
+header h1  {
     font-size: 30px;
     color: var(--blanc);
     padding-bottom: 0px;
@@ -11,52 +15,65 @@ h1  {
     display: flex;
     align-items: center; /* Centrer le contenu verticalement */
   }
-h2 { font-size:25px;color:var(--orange-entete); }
-h3 { font-size:17px; color:var(--blanc);}
-h4 { font-size:20px; color:var(--blanc); font-weight: bold;}
-h5 { font-size:5px; color:var(--orange-noir);}
-/* Style for header */
+header h2 { 
+  font-size:12px;
+  color:var(--orange-entete);
+  color:blue;
+}
+header h3 { 
+  font-size:15px; 
+  color:var(--blanc);
+  color:white;
+}
+
+
 header {
     position: fixed;
     top: 0;
     z-index: 9999;
     height: var(--height-header);
-    margin-left: 100px;
     justify-content: center; /* Centrer le contenu horizontalement */
-    color:white;
+    color:WHITE;
     background-color:var(--noir);
   }
-  header td {
-    background: var(--noir);
-    color:var(--blanc);
+  header * {
+    margin: 0;
+    padding: 0;
+}
+  .col-address .iconContacts,
+  .col-phone .iconContacts {
+      margin-right: 10px; /* Espace entre l'icône et le texte */
   }
   
+  .col-address h2,
+  .col-phone h2 {
+      margin-top: 0px; /* Espace sous le titre */
+  }
+  
+  .col-address .address-text p {
+      margin-top: 0; /* Ajuster la marge inférieure des paragraphes */
+      margin-left: 32px; /* Alignement à gauche avec l'icône */
+  }
+  .col-phone {
+    margin-top: 0; 
+  }
+  .col-phone h3 {
+      margin-top: 10px; /* Espace au-dessus du numéro de téléphone */
+      margin-left: 32px; /* Alignement à gauche avec l'icône */
+  }
+  
+  .address-text p {
+    line-height: 1.5; /* Ajuste selon vos besoins */
+}
+.phone-link {
+  color: inherit; /* Assure que le lien n'a pas de couleur par défaut et utilise celle du texte environnant */
+  text-decoration: none; /* Enlève le soulignement par défaut du lien */
+}
 
-.col-club {
-  font-size: 30px;
+.phone-link p {
+  margin: 0; /* Assure que le paragraphe à l'intérieur du lien n'a pas de marge par défaut */
 }
-.col-club h1 {
 
-}    
-.col-address {
-
-}
-.col-address h2 {
-
-}
-.col-address h3 {
-
-}
-.address-text {
-  display: flex;
-  flex-direction: column; /* Aligne les éléments en colonne */
-  justify-content: center; /* Centre le texte verticalement dans la colonne */
-}
-/* Styles pour les détails de l'adresse */
-.address-details {
-    display: flex;
-    flex-direction: column; /* Aligne les lignes d'adresse en colonne */
-}
   .col-phone {
 
   }
@@ -79,5 +96,10 @@ header {
 
     
   }
-  .iconContacts{ height:50px; width:50px;}
+  .iconContacts{ 
+    top: 0; 
+    height:50px; 
+    width:50px;
+    margin-top: 5px;
+  }
   .iconGAFAM{ height:30px; width:30px;}

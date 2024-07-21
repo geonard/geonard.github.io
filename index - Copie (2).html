@@ -25,14 +25,14 @@
         <body>
             <header class="container-fluid d-none d-md-block custom-header">
                 <div class="container">
-                    <div class="grid-header">
+                    <div class="row align-items-start g-0">
                         <!-- Colonne 1: Logo -->
-                        <div class="logo">
-                            <h1>CLUB AUTO</h1>
+                        <div class="col-12 col-md-2 d-flex align-items-center justify-content-start header-item">
+                            <h1 class="mb-0">CLUB AUTO</h1>
                         </div>
             
                         <!-- Colonne 2: Adresse -->
-                        <div class="address">
+                        <div class="col-12 col-md-3 d-flex align-items-start header-item">
                             <img src="images/icone-adresse.png" class="iconContacts img-fluid" alt="Adresse Icon">
                             <div class="ms-2">
                                 <h2 class="mb-1"><b>ADRESSE :</b></h2>
@@ -42,7 +42,7 @@
                         </div>
             
                         <!-- Colonne 3: Téléphone -->
-                        <div class="phone">
+                        <div class="col-12 col-md-3 d-flex align-items-start header-item">
                             <img src="images/icon-telephone.png" class="iconContacts img-fluid" alt="Téléphone Icon">
                             <div class="ms-2">
                                 <h2 class="mb-1"><b>TELEPHONE :</b></h2>
@@ -51,7 +51,7 @@
                         </div>
             
                         <!-- Colonne 4: Ouverture -->
-                        <div class="opening-hours">
+                        <div class="col-12 col-md-3 d-flex align-items-start header-item">
                             <div>
                                 <div class="d-flex align-items-center">
                                     <h2 class="mb-0"><b>OUVERTURE :</b></h2>
@@ -65,7 +65,7 @@
                         </div>
             
                         <!-- Colonne 5: Réseaux sociaux -->
-                        <div class="social-media">
+                        <div class="col-12 col-md-1 d-flex align-items-center justify-content-center header-item">
                             <img src="images/facebook.jpg" class="iconGAFAM img-fluid me-2" alt="Facebook Icon" />
                             <img src="images/twitter.jpg" class="iconGAFAM img-fluid" alt="Twitter Icon" />
                         </div>
@@ -74,31 +74,16 @@
             </header>
             
             <style>
-                .grid-header {
-                    display: grid;
-                    grid-template-columns: repeat(12, 1fr);
-                    gap: 10px;
-                    align-items: start;
+                .header-item {
+                    padding: 10px;
                 }
             
-                .logo {
-                    grid-column: span 2;
+                .iconContacts {
+                    width: 24px; /* Ajustez la largeur selon vos besoins */
+                    height: auto;
                 }
             
-                .address, .phone, .opening-hours {
-                    grid-column: span 3;
-                    display: flex;
-                    align-items: start;
-                }
-            
-                .social-media {
-                    grid-column: span 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            
-                .iconContacts, .iconGAFAM {
+                .iconGAFAM {
                     width: 24px; /* Ajustez la largeur selon vos besoins */
                     height: auto;
                 }
@@ -111,18 +96,17 @@
                     margin-right: 0.5rem;
                 }
             
-                /* Réponsive */
-                @media (max-width: 768px) {
-                    .grid-header {
-                        grid-template-columns: 1fr;
-                    }
+                /* Assurez-vous que les éléments sont bien alignés */
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
             
-                    .logo, .address, .phone, .opening-hours, .social-media {
-                        grid-column: span 1;
-                    }
+                .col-md-2, .col-md-3, .col-md-1 {
+                    display: flex;
+                    align-items: center;
                 }
             </style>
-            
             
             
             

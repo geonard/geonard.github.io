@@ -1,3 +1,56 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.navbar-toggler {
+    background-color: #444;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: none; /* Masqué par défaut */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.navbar-menu.open {
+    display: block;
+    max-height: 300px; /* Ajustez la hauteur comme souhaité */
+}
+
+.navbar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.navbar-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu ul li a:hover {
+    text-decoration: underline;
+}
 
 
 

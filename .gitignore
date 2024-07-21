@@ -1,0 +1,14 @@
+# Ignorer les fichiers de configuration d'éditeurs de texte
+.vscode/
+gilab-ci.yml
+# Ignorer les fichiers de build
+/build/
+/dist/
+
+# Ignorer les fichiers temporaires
+*.log
+*.tmp
+
+# Ignorer les fichiers spécifiques à C3
+/C3/dos/
+/C3/node_modules/
