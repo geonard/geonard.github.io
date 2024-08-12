@@ -14,41 +14,36 @@
   padding: 0px;
   box-sizing: border-box;
 }
-h1 {
-    font-size: 1.5em;
-    margin: 20px auto;
-    text-align: center;
-    text-transform: uppercase;
-}
-.no-scroll-iframe {
-    overflow: hidden;
-    width: 100%;  
-    height: 100%; 
-    border: none; /* Remove border if needed */
-}
 
-body {
+header, .c1_menu {
+    padding:0;
+    margin:0;
+  }
+.container-fluid {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+.container-fluid img {
+    width: 100%; /* L'image prendra toute la largeur du conteneur */
+    overflow: hidden;
+  }
+.c1_menu {
     position:relative;
 }
-.container-fluid {
+.c1_menu .navbar {
+    position: fixed;
+  }
+.c1_menu img {
+    z-index:1;
     width:100%;
-}
-.conteneur {
-    position:absolute;
-    top:300px;
-    height:500px;
-    padding-left:150px;
-    display: flex;
-    margin-top:600px;
-    margin-left:400px;
-    background-color:white;
-    border: 1px solid black;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width:1000px;
+    margin-top: var(--h-header); 
+    z-index:1;
+  } 
 
-    flex-flow: column wrap;
-    justify-content:center;
-    grid-template-columns: 1fr 1fr 1fr;
+.c1_menu a {
+     vertical-align: top;
+     color: black; 
+     text-decoration: none; 
 }
 .custom-navbar .navbar {
     width: 100%;}
@@ -89,6 +84,7 @@ label {
 }
 .image-container {
     position: relative;
+    z-index:1;
     height: 50vh; /* 50% of the viewport height */
     overflow: hidden;
   }
@@ -98,6 +94,10 @@ label {
     height: 50%;
     object-fit: cover; /* Ensures the image covers the container */
   }
+  .container-form {
+    margin-top:-400px;
+    z-index:2;
+}
 .message { 
     background-color:rgb(241, 235, 235);
     width: var(--w-message);
@@ -110,17 +110,51 @@ button[type="submit"]  {
     height:50px;
 }
 
-@media screen and (min-width: 980px){
-    textarea {width:200px;}
-}
-@media screen and (min-width: 767px){
-    body {width:100; margin-left:5px;}
-    .container-fluid, .conteneur {
-        width:100%;
-        margin-left:5px;
-        left:0;
-    }
 
+@media screen and (min-width: 767px){
+    html, body  {
+        margin:0;
+        padding:0;
+       }
+       body { 
+        width:100%;
+        overflow-x: hidden; /* Empêche le défilement horizontal */
+    }
+       .container-fluid img {
+        width: 100%; 
+        height:auto;
+      }
+      .container-fluid {
+        width: 100%;
+        padding-left:100x;
+        margin: 0px;
+      }
+
+    .c1-mobile-text {
+        margin-top: 0px; /* Ajustez la marge-top pour compenser la hauteur de a1_menu */
+        padding: 0px; /* Ajustez le padding selon vos besoins */
+        height:auto;
+        text-align: start;
+        background-color: black; /* Assurez-vous que le fond est visible */
+    }
+    .c1-mobile-text img {
+        width:60px;
+        height:auto;
+    }
+    .c1-mobile-text  h1 { 
+        margin-top: 0px;
+        font-size:30px;
+        font-weight:bold;
+    }
+    .c1-mobile-text  h2 { 
+        font-size:28px;
+        color:var(--orange);
+    }
+    .c1-mobile-text h3 {
+        font-size:28px; 
+        color:var(--blanc);
+        font-weight:bold;
+    }
     .prenom {
         grid-column: 1 / 2;
     }

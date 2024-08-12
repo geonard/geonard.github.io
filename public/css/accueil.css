@@ -1,16 +1,5 @@
 
 :root {
-  /* charte des couleurs */
-    --entretienrder-debug: 0px; /*  debug pour localiser les balises */
-    --marge-debug: 5px;
-    --rouge: #ff4848; 
-    --noir: #232628; 
-    --blanc: #ffffff; 
-    --orange: #fab637; 	
-    --orange-entete: #c68917; 
-    --marron : #cc6119; 
-    --bleu : #6c98e1;
-
     --marge-top: 0px;
     --marge-left: 100px;
     --marge-right: 100px;
@@ -23,7 +12,9 @@
 
 /* position des éléments dans le html */
 --h-entretien_clients: 1000px; 
---t-a1_menu:var(--h-header);
+
+--mt-footer:-200px;
+
 --t-a2_pub: 600px;
 --h-a2_pub: 70px;  
 --t-a3_entretien_clients:calc(var(--t-a2_pub)+var(--h-a2_pub));
@@ -52,9 +43,10 @@
 --mt-a3_entretien_clients:clac(var(--mt-a2_pub)+var(--h-a2_pub));
 --t-veh_3_cadre:280px;
 --l-veh_3_cadre:300px;
---w-veh_3_cadre:400px;
+--w-veh_3_cadre:500px;
 --h-veh_3_cadre:200px;
 
+--h-header:100px;
 --h-footer:1000px;
 }
 /* ************************************************************gestion des couleurs */
@@ -97,7 +89,7 @@
   .id_Lorem-white { color: var(--blanc); }  
 
 /* ***********************************************************************************/
-  .icon-nous-choisir  {width:50px; height:50px; }
+.icon-nous-choisir  {width:50px; height:50px; }
 
 
 
@@ -133,27 +125,36 @@
 html {
   margin-left:0 5px 0 5px;
  }
-.container-fluid {
-width: 100%;
-padding: 0; /* Ajustez le padding pour éviter le débordement */
+.container-fluid, .container {
+max-width:1500px;
+/* Ajustez le padding pour éviter le débordement */
 margin-left: 100px;
 margin-right: 100px;
 }
-
+.container-fluid img {
+  width: 100%; /* L'image prendra toute la largeur du conteneur */
+  overflow: hidden;
+}
 .a1_menu {
-    width:100%;
-    margin-top: var(--h-header); 
-    padding:0;
+  position:relative;
+  width:100%; 
+}
+.a1_menu img {
+  z-index:1;
+}
+.a1_menu .navbar {
+  position: fixed;
+  padding-top:100px;
+  z-index:200;
 }
 .a1_menu a {
-    vertical-align: top;
+   vertical-align: top;
    color: black; 
    text-decoration: none; 
   }
-.a1_menu a:hover { background-color: var(--rouge); }
 
 .a2_pub {
-  position: relative;
+  position:relative;
   display: flex;
   height:var(--h-a2_pub);
   margin-top: var(--mt-a2_pub)  !important;
@@ -180,7 +181,7 @@ margin-right: 100px;
   background-color: white;
   z-index: 2; /* Assurez-vous que cet élément est en dessous de .a2_pub */
 }
-.a3_entretien_clients  h2 {
+.a3_entretien_clients h2 {
   font-size:2.5vm;
   font-weight:bold;
   color:black;
@@ -195,10 +196,7 @@ margin-right: 100px;
 }
 
 .a4_chapeau {
-
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 .a4_chapeau_text_1, .a4_chapeau_text_2 {
   position:relative;
@@ -230,15 +228,14 @@ margin-right: 100px;
   line-height: 1.6;
 }
 .a6-lorem {color:red;}
+
 .a5_veh_rec {
   position: relative;
   vertical-align: top;
   text-align: center;
   height: auto; 
   background-color: black; 
-  color: white;
-  border-bottom: 5px solid var(--orange);
-  padding-bottom: 7px;
+  padding-bottom: 100px;
   margin-left:250px;
   margin: 0 10px;
   border-top: 30px solid black;
@@ -251,7 +248,6 @@ margin-right: 100px;
   color:white;
   background-color:black;
   border-top: 30px solid black;
-  border-bottom: 5px solid gold;
   margin-bottom: 30px;
   padding-bottom:5px;
 }
@@ -272,38 +268,73 @@ margin-right: 100px;
   position:relative;
   text-align: center; /* Pour centrer horizontalement */
   border:1px solid white;
-  background-color:vair(--noir);
+  background-color:var(--noir);
+  color:white;
   font-size:18px;
+  vertical-align: middle;
+  padding:20px;
+  height:90px;
+}
+.promo-text .first-word, 
+.promo-text .second-word {
+    margin: 0; /* Enlever les marges par défaut */
+    padding: 0; /* Enlever les espacements par défaut */
 }
 .promo-text div {
   font-weight:bold;
 }
-.first-column {
-  left:10px;
-}
-.second-column {
+.promo-text .tab-words  {
+  position: absolute;
   display: inline-block; /* Permet d'afficher les mots sur le premier mot  */
   vertical-align: middle;/* Pour aligner verticalement par rapport au prmier mot */
   background-color: var(--bleu);
   color: white;
-  right:20px;
+  right:0px;
+  padding-left:5px;
+  padding-right:10px;
 }
-.second-column div:nth-child(1) {
-  text-decoration: line-through;/* barrer le mot */
+.promo-text:nth-of-type(3) .tab-words div:nth-child(1) {
+  text-decoration: line-through;
 }
-.first-word {
+
+.promo-text .first-word {
   position:absolute;
   left:0;
   top:0;
   display: inline-block;/* Permet de centrer le mot sur une ligne */
   margin-right: 20px; /* Espace entre les mots */
 }
-.second-word {
+.promo-text .second-word {
   position:absolute;
   left:0;
   top:30px;
 }
 
+.a6_nous_choisir {
+  padding: 30px 0; /* Ajustez le padding si nécessaire */
+}
+.a6_nous_choisir .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.a6_nous_choisir .row {
+  margin-left: 0;
+  margin-right: 0;
+  gap: 20px; 
+}
+.a6_nous_choisir .col-gap {
+  padding-left: 15px; /* Ajustez cette valeur selon vos besoins */
+  padding-right: 15px; /* Ajustez cette valeur selon vos besoins */
+}
+.a6_nous_choisir .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.a6_nous_choisir .d-flex {
+  display: flex;
+  align-items: flex-start; /* Aligne les éléments au début de la ligne */
+}
  .a6_nous_choisir {
   position:relative;
   text-align:center;
@@ -315,17 +346,17 @@ margin-right: 100px;
   font-size:45px;
   font-weight: bold;
   text-align: center;
-  color:black;
+  color:var(--noir);
 }
 .a6_nous_choisir div div h2 {
   text-align: start;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  color:blue;
+  color:black;
   text-align: center;
 }
 .a6_nous_choisir div div h3 {
-  font-size: 14px;
+  font-size: 12px;
   color:var(--gris);
 }
 
@@ -346,24 +377,16 @@ margin-right: 100px;
   display: inline-block; /* Utilisez inline-block pour ajuster la taille de la bordure autour du texte */
   margin: auto; /* Centre l'élément horizontalement */
 }
-
 .a8_veh_3 {
   position:relative;
-  vertical-align: top;
-  max-width: 100%;  /* Gardez l'image à l'intérieur de son conteneur */
-  height: auto; /* Ajustez automatiquement la hauteur pour conserver les proportions */
-  color:var(--blanc); }
-
-.a8_veh_3 img {
-max-width: 100%;
-height:auto;
-z-index:1;
 }
-
+.a8_veh_3 img {
+  z-index:1;
+}
 .a8_veh_3-text {  
     position:absolute; 
-    z-index:1; 
-    top:200px;
+    z-index:2; 
+    top:var(--t-veh_3_cadre);
     left: var(--l-veh_3_cadre);
     width: var(--w-veh_3_cadre);
     height: auto;
@@ -371,26 +394,22 @@ z-index:1;
     background-color:var(--orange);
     color:black;
     padding: 10px;
-    margin: 0;}
- 
-.a8_veh_3-text h1 {
-  color:black;
-  font-size: 1.5vw;/* Taille de police responsive */}
-
-.a8_veh_3-text  h2 {
+    margin: 0;
+  }
+.a8_veh_3-text h1 span:first-of-type {
+  color:var(--noir);
+  font-size:35px;
+  font-weight:bold;
+  font-size: 25px;/* Taille de police responsive */
+}
+.a8_veh_3-text h1 span:last-of-type {
   color: white;
-  font-size: 1.5vw;
+  font-weight:bold;
+  font-size: 25px;
 }
-.a8_veh_3-text p {
-  color: black;
-  font-size: 1vw; /* Taille de police responsive */
-}
-
-*{
-  font-size: 1em;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.a8_veh_3-text h2 p {
+  color: white;
+  font-size: 15px; /* Taille de police responsive */
 }
 
 footer {
@@ -399,30 +418,109 @@ footer {
   margin-top: var(--mt-footer)  !important;
   color:var(--blanc);
   top: var(--t-footer);
-  z-index:2;
+  z-index:2 !important;
 }
 
 
 
 /* Ajustez le titre en fonction de la taille de l'écran */
 @media (max-width: 767px) {
-  html, .container-fluid, body  {
-    margin-left:0 5px 0 5px;
+  html, body  {
+    margin:0;
+    padding:0;
    }
+   body { 
+    width:100%;
+    padding-top: 100px; 
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+  .container-fluid, .container {
+    margin-left:0;
+    margin-right:0;
+}
+   .container-fluid img {
+    width: 100%; /* Redimensionne les images pour s'adapter à la largeur de l'écran */
+    height:auto;
+  }
+  .container-fluid {
+    width: 100%;
+    padding: 0x; /* Ajustez le padding pour éviter le débordement */
+    margin: 0px;
+
+  }
+  .hamburger-menu {
+    display: inline-block; /* Assure que le bouton est visible */
+    display:block;
+}
+  .a1_menu {
+    position:fixed;
+    top:0;
+
+    background-color:black;
+    z-index: 1040; /* Assurez-vous que c'est inférieur à celui du bouton hamburger */
+  }
+  .a1_menu .navbar {
+    background-color:black;
+  }
+  .navbar-toggler {
+    z-index: 1050
+  }
+  .d-flex {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    align-items: center; /* Aligne verticalement au centre */
+}
+.text-container img {
+  width:30px; 
+  height:30px;
+}
+.me-2 {
+    margin-right: 0.5rem; /* Espace entre l'icône et le texte */
+}
+  .a1-mobile-text {
+    margin-top: 56px; /* Ajustez la marge-top pour compenser la hauteur de a1_menu */
+    padding: 20px; /* Ajustez le padding selon vos besoins */
+    height:auto;
+    text-align: start;
+    background: black; /* Assurez-vous que le fond est visible */
+  }
+  .a1-mobile-text img {
+    width:100px;
+    height:auto;
+  }
+  .a1-mobile-text  h1 { 
+    margin-top: 70px;
+    font-size:40px;
+    font-weight:bold;
+  }
+  .a1-mobile-text  h2 { 
+    font-size:28px;
+    color:var(--orange);
+  }
+  .a1-mobile-text h3 {
+    font-size:28px; 
+    color:var(--blanc);
+    font-weight:bold;
+  }
+  .a2_pub {display:none !important;}
+  .a5_veh_rec .col-12.col-md-3 {
+    padding:0;
+  }
+  .a5_veh_rec .container img {
+    left: 0;
+  }
+  .a5_veh_rec .col-12 {
+    flex: 0 0 100%; /* Désactive la flexibilité et force la largeur à 100% sur mobile */
+    max-width: 100%; /* Assure que la largeur maximale est de 100% */
+  }
+  .a5_veh_rec .img-fluid {
+    margin-left: 0;
+  }
   .title-veh_rec {
       font-size: 1.5rem; /* Réduit la taille du texte pour les petits écrans */
       margin-bottom: 20px; /* Ajuste l'espacement sous le titre */
       text-align:center;
   }
-  .col-12 {
-    flex: 0 0 100%; /* Désactive la flexibilité et force la largeur à 100% sur mobile */
-    max-width: 100%; /* Assure que la largeur maximale est de 100% */
-  }
-  body { 
-    width:100%;
-    padding-top: 100px; 
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-}
+
   button {z-index:9999; display:block; } /* hamburger */
   header {
     position: relative;
@@ -446,17 +544,9 @@ footer {
 }
 .a3_entretien_clients h3 {
   margin-left:44px;
-  margin-right:50px;}
-.a3-mobile-text {
-    position:absolute;
-    top:0px;
-    padding-top: 200px; /* Align with .a3_entretiens padding */
-    height:300px;
-    text-align: center; /* Center align text */
-    font-size: 1.5em; /* Adjust font size as needed */
-    color: #000; /* Adjust text color as needed */
-    display: block; /* Ensure the text is displayed */
+  margin-right:50px;
 }
+
 .a5_veh_rec {
 padding-top: 20px; /* Ajout d'un espace pour éviter le chevauchement */
 }
@@ -465,28 +555,47 @@ padding-top: 20px; /* Ajout d'un espace pour éviter le chevauchement */
   font-size:30px;
 }
 .a6_nous_choisir div div h2 {
-  font-size:2em;
+  font-size:1.5em;
   font-weight:bold;
 }
 .a6_nous_choisir div div h3 {
   color:black;
   font-size:1em;
 }
-
-.container-fluid img {
-  width: 100%; /* Redimensionne les images pour s'adapter à la largeur de l'écran */
+.a6_nous_choisir img {
+  width:100px;
   height:auto;
 }
-.container-fluid {
-  width: 100%;
-  padding: 0 10px; /* Ajustez le padding pour éviter le débordement */
-  margin: 0 auto;
-  margin-left: 5px; /* Décalage de 50px vers la gauche */
-  margin-right: 5px;
+
+
+.a8_veh_rec {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-items: center;
+
+}
+.a8_veh_rec img {position:relative;   z-index:8;}
+.a8_veh_3-text {
+  position: absolute;
+  left:0;
+  transform: none;
+  padding:10px;
+  width:100%;
+  z-index:9;
+}
+.a8_veh_3-text h1 span {
+  margin-bottom: 5px; /* Ajuste l'espacement pour les mobiles */
+}
+
+footer {position:absolute;
+  text-align: center;
+  padding: 10px 0;
+  margin-top:500px;
 }
 }
+
  .liseret-copyright {
      width: auto;
      height: 100%;
@@ -496,72 +605,70 @@ padding-top: 20px; /* Ajout d'un espace pour éviter le chevauchement */
      margin-right: 40px;
   }
  
- 
-
 
 /* styles footer */
-            input[type=email],
-            textarea {
-              width: 100%;
-              max-width: 250px;
-              border: 2px solid #72ae00;
-              border-radius: 4px;
-              margin: 8px 0;
-              outline: none;
-              padding: 8px;
-              box-sizing: border-box;
-            }
-      
-            input[type=text],
-            input[type=email] {
-              height: 35px;
-              width: 230px;
-            }
-      
-            textarea {
-              height: 75px;
-              font-family: "MontSerrat";
-              font-size: 13px;
-              line-height: 1.1;
-            }
-      
-            .input-icone {
-              display: flex;
-              align-items: stretch;
-            }
-      
-            .icon-input input {
-              flex-grow: 1;
-              max-height: 100%;
-            }
-      
-      
-            .input-icone input[type=text],
-            input[type=email],
-            textarea {
-              padding-left: 35px;
-            }
-      
-            .input-icone {
-              position: relative;
-            }
-      
-            .input-icone i {
-              position: absolute;
-              right: 0;
-              top: 8px;
-              width: 35px;
-              padding: 9px 8px;
-              color: rgb(128, 0, 255);
-            }
-      
-            input[type=email]:hover {
-              background: #f2f2f2;
-            }
-      
-            textarea:hover {
-              background: #f2f2f2;
-            }
+input[type=email],
+textarea {
+  width: 100%;
+  max-width: 250px;
+  border: 2px solid #72ae00;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+input[type=text],
+input[type=email] {
+  height: 35px;
+  width: 230px;
+}
+
+textarea {
+  height: 75px;
+  font-family: "MontSerrat";
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.input-icone {
+  display: flex;
+  align-items: stretch;
+}
+
+.icon-input input {
+  flex-grow: 1;
+  max-height: 100%;
+}
+
+
+.input-icone input[type=text],
+input[type=email],
+textarea {
+  padding-left: 35px;
+}
+
+.input-icone {
+  position: relative;
+}
+
+.input-icone i {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 35px;
+  padding: 9px 8px;
+  color: rgb(128, 0, 255);
+}
+
+input[type=email]:hover {
+  background: #f2f2f2;
+}
+
+textarea:hover {
+  background: #f2f2f2;
+}
       
 
 

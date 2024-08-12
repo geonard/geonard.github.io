@@ -1,0 +1,85 @@
+footer {
+  border-top:20px solid var(--noir);
+  border-left:20px solid var(--noir);
+  background-color:var(--noir);
+  padding-left:20px;
+}
+footer h1 {
+  color:red;
+}
+footer p {
+  color:white;
+}
+
+.liseret-copyright {
+    width: auto;
+    height: 100%;
+    text-align:center;
+    margin-left: 40px;
+    margin-right: 40px;
+    color:white;
+ }
+
+/* styles footer */
+input[type=email],
+textarea {
+  width: 100%;
+  max-width: 250px;
+  border: 2px solid #72ae00;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+input[type=text],
+input[type=email] {
+  height: 35px;
+  width: 230px;
+}
+
+textarea {
+  height: 75px;
+  font-family: "MontSerrat";
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.input-icone {
+  display: flex;
+  align-items: stretch;
+}
+
+.icon-input input {
+  flex-grow: 1;
+  max-height: 100%;
+}
+
+
+.input-icone input[type=text],
+input[type=email],
+textarea {
+  padding-left: 35px;
+}
+
+.input-icone {
+  position: relative;
+}
+
+.input-icone i {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 35px;
+  padding: 9px 8px;
+  color: rgb(128, 0, 255);
+}
+
+input[type=email]:hover {
+  background: #f2f2f2;
+}
+
+textarea:hover {
+  background: #f2f2f2;
+}

@@ -1,0 +1,199 @@
+.l1_menu {
+  position:relative;
+  top:100px;
+}
+
+
+
+.custom-menu1 .menu {
+  display: flex; /* Disposer les éléments sur une seule ligne */
+  padding: 0;
+  margin: 0;
+}
+
+.custom-menu1 .menu ul {
+  list-style: none; /* Supprimer les puces de la liste */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Disposer les éléments en ligne */
+}
+
+.custom-menu1 .menu li {
+  margin-right: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.custom-menu1 .menu li::after {
+  content: "/"; /* Ajouter le séparateur */
+  margin-left: 10px; /* Espacement à gauche du séparateur */
+  color: black; /* Couleur du séparateur */
+}
+
+.custom-menu1 .menu li:last-child::after {
+  content: ""; /* Supprimer le séparateur après le dernier élément */
+}
+
+.custom-menu1 .menu li a {
+  color: black; /* Couleur des liens */
+  text-decoration: none; /* Supprimer la décoration des liens */
+  font-weight: bold;
+  font-size: 16px; /* Ajuster la taille de la police selon vos besoins */
+}
+
+.custom-menu1 .menu li a:hover {
+  text-decoration: underline; /* Décoration survolée */
+}
+.custom-menu2 img {
+  width:30px;
+  height:auto;
+}
+.img-vehicule-title {
+  font-size:30px;
+  font-weight: bold;
+}
+.content-lorem p:nth-of-type(3) {
+  border-left:5px solid var(--orange);
+  padding-left:15px;
+  font-style:italic;
+  color: gray; 
+}
+.list-group-item {
+  margin-right: 15px; /* Espacement entre les éléments du menu */
+}
+
+.content-lorem p {
+  margin: 0; /* Supprime les marges par défaut des <p> */
+}
+
+.content-lorem .d-flex {
+  margin-bottom: 15px; /* Espacement entre les éléments du contenu */
+}
+.menu2 {
+  display: flex;
+  flex-wrap: nowrap; /* Les éléments du menu sont sur une seule ligne */
+}
+
+.menu2 {
+  display: flex;
+  flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+}
+.menu2 a {
+  text-decoration: none; /* Retire le soulignement des liens */
+}
+.menu2 a:hover {
+  color:red;
+}
+.background-block {
+  display: flex; /* Assure l'alignement des éléments à l'intérieur */
+}
+.background-block .list-group-item {
+  color:yellow;
+}
+
+.menu2 li {
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+@media (max-width: 768px) {
+  html, body  {
+    margin:0;
+    padding:0;
+   }
+   body { 
+    width:100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+   .container-fluid img {
+    width: 100%; 
+    height:auto;
+  }
+  .container-fluid {
+    width: 100%;
+    padding: 0x;
+    margin: 0px;
+  }
+  .l1-mobile-text {
+    margin-top: 0px; /* Ajustez la marge-top pour compenser la hauteur de a1_menu */
+    padding: 0px; /* Ajustez le padding selon vos besoins */
+    height:200px;
+    text-align: start;
+    background-color: black; /* Assurez-vous que le fond est visible */
+}
+  .l1-mobile-text img {
+    width:60px;
+    height:auto;
+  }
+  .custom-menu1 .menu ul {
+      flex-direction: column; /* Disposer les éléments en colonne sur petits écrans */
+  }
+
+  .custom-menu1 .menu ul li {
+      margin-right: 0; /* Supprimer l'espacement à droite des éléments de la liste */
+      margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+  }
+  .custom-menu2 img {
+    width:50px;
+    height:auto;
+  }
+  .custom-menu2 .menu2 {
+      flex-direction: column; /* Disposer les éléments en colonne sur petits écrans */
+  }
+
+  .custom-menu2 .menu2 .list-group-item {
+      margin-right: 0; /* Supprimer l'espacement à droite des éléments de la liste */
+      margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+  }
+
+  li.list-group-item {
+    text-align:center;
+  }
+  .list-group-item:first-of-type h2 {
+    color: black; 
+    font-weight: bold;
+    border-top:5px solid var(--orange);
+    border-left:5px solid var(--noir);
+}
+  div.content-lorem p {
+    margin-bottom: 40px;  
+  }
+  .l1-mobile-container {
+    /* Ajoutez des styles pour le conteneur si nécessaire */
+}
+
+.d-flex {
+    display: flex;
+    align-items: center; /* Aligne les éléments au centre verticalement */
+}
+
+.iconContacts {
+    height: 24px; /* Ajustez la taille selon vos besoins */
+    width: 24px;  /* Ajustez la taille selon vos besoins */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Dispose le texte verticalement */
+    justify-content: center; /* Centre verticalement le texte */
+}
+
+h2, h3, h1 {
+    margin: 0; /* Réduit les marges pour un meilleur alignement */
+}
+
+h2 {
+    margin-bottom: 0.5rem; /* Ajuste l'espacement entre le titre et le texte */
+}
+
+h3 {
+    margin-bottom: 0.5rem; /* Ajuste l'espacement entre le texte du téléphone et le titre */
+}
+.menu2,
+.background-block {
+    flex-direction: column; /* Passe les éléments en colonne sur les petits écrans */
+}
+
+.list-group-item {
+    margin-right: 0; /* Supprime les marges sur les petits écrans */
+    margin-bottom: 10px; /* Ajoute un espacement entre les éléments sur les petits écrans */
+}
+
+}

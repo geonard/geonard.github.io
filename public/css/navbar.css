@@ -1,0 +1,90 @@
+/* Style du bouton hamburger */
+.navbar-toggler {
+    border: none; /* Supprimer la bordure du bouton */
+    background: transparent; /* Supprimer le fond du bouton */
+    padding: 0; /* Supprimer le padding du bouton */
+}
+.navbar {
+    position:fixed;
+}
+/* Style des trois barres du bouton hamburger */
+.navbar-toggler-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px; /* Largeur des traits */
+    height: 20px; /* Hauteur totale du bouton */
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    background-color: #000; /* Couleur des traits */
+    height: 3px; /* Hauteur des traits */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: 0; /* Position du premier trait */
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0; /* Position du troisième trait */
+}
+
+.navbar-toggler-icon span {
+    display: block;
+    background-color: #000; /* Couleur des traits */
+    height: 5px; /* Hauteur des traits */
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Pour masquer le menu complet en mode mobile et afficher uniquement le bouton hamburger */
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none; /* Masquer le bouton hamburger sur les grands écrans */
+    }
+
+
+/* Styles pour le menu de navigation lorsque le bouton hamburger est cliqué */
+.navbar-collapse {
+    display: none; /* Masqué par défaut */
+}
+
+.navbar-toggler.collapsed + .navbar-collapse {
+    display: block !important; /* Afficher le menu uniquement après clic sur le bouton hamburger */
+}
+
+.navbar-nav .nav-link {
+
+    width:100%;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Couleur de fond pour les éléments de menu au survol */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus {
+    color: #007bff; /* Couleur du texte pour le lien actif */
+    background-color: rgba(0, 123, 255, 0.1); /* Couleur de fond pour le lien actif */
+    font-weight: bold; /* Gras pour le lien actif */
+}
+
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-link:focus:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Couleur de fond au survol pour le lien actif */
+    color: #0056b3; /* Couleur du texte au survol pour le lien actif */
+}
+
+/* Styles pour le conteneur d'image */
+.img-container {
+    position: relative;
+    padding-top: 60px; /* Pour éviter que l'image ne soit cachée sous la navbar */
+}
+}
