@@ -1,5 +1,5 @@
 - [Architecture](#Architecture)
-- [Lancement Appli](https://geonard.github.io/index.html)
+- [Lancement Appli](https://geonard.github.io/public/index.html)
 - [Framework](#Framework)
 - [Documentation](#Documentation)
 
