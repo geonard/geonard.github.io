@@ -1,391 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CLUB AUTO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/principal.css?v=1.0">
-    <link href="css/principal.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/accueil.css" rel="stylesheet"> <!-- Corrigé : ajout du .css -->
-    <link href="css/footer.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB AUTO - Location de véhicules</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iY8g1cDZm3fR4vF8wVd5YVVz6f9e3n6K/t+/m0G8zFfJXy1FYg0Lhr4Ma" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-
-<!-- header --> 
-<header class="container-fluid d-none d-md-block">
-    <div class="container">
-        <div class="grid-header">
-            <!-- Colonne 1: Logo -->
-            <div class="logo-club">
-                <h1>CLUB AUTO</h1>
-            </div>
-
-            <!-- Colonne 2: Adresse -->
-            <div class="address">
-                <img src="images/icone-adresse.png" class="iconContacts img-fluid" alt="Adresse Icon">
-                <div class="ms-2">
-                    <h2 class="mb-1"><b>ADRESSE :</b></h2>
-                    <h3 class="m-0">AVENUE CHARLES DE GAULLE</h3>
-                    <h3 class="m-0">75000 PARIS</h3>
-                </div>
-            </div>
-
-            <!-- Colonne 3: Téléphone -->
-            <div class="phone">
-                <img src="images/icon-telephone.png" class="iconContacts img-fluid" alt="Téléphone Icon">
-                <div class="ms-2">
-                    <h2 class="mb-1">TELEPHONE :</h2>
-                    <h3 class="mb-0">06 95 90 74 27</h3>
-                </div>
-            </div>
-
-            <!-- Colonne 4: Ouverture -->
-            <div class="opening-hours">
-                <div>
-                    <div class="d-flex align-items-center">
-                        <h2 class="mb-0"><b>OUVERTURE :</b></h2>
-                        <h3 class="ms-2 mb-0">Du Lundi au Samedi</h3>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <h2 class="mb-0"><b>HORAIRES :</b></h2>
-                        <h3 class="mb-0">De 9h à 17h</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Colonne 5: Réseaux sociaux -->
-            <div class="social-media">
-                <img src="images/facebook.jpg" class="iconGAFAM img-fluid me-2" alt="Facebook Icon" />
-                <div style="width: 40px;"></div>
-                <img src="images/twitter.jpg" class="iconGAFAM img-fluid" alt="Twitter Icon" />
-            </div>
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">CLUB AUTO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nos véhicules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Offres spéciales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
 
-<section class="container-fluid a1_menu d-none d-md-block mt-0">
-    <nav class="navbar navbar-expand-md bg-blue-light-opacity navbar-overlay">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link bold-text" href="index.html">ACCUEIL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bold-text" href="#">VENTE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bold-text" href="location.html">LOCATION</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bold-text" href="contact.html">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div>
-        <img src="./images/vehicule1.jpg" class="img-fluid d-none d-md-block" alt="Vehicule 1">
-    </div>
-</section>
-
-<section class="container-fluid d-md-none d-block mt-5 a1-mobile-text">
-    <div class="a1-mobile-container">
-        <div class="d-flex align-items-center">
-            <img src="images/icon-telephone.png" class="iconContacts img-fluid me-2" />
-            <div>
-                <h2><b>TELEPHONE :</b></h2>
-                <h3><b>01 23 45 67 89</b></h3>
-                <h1>
-                    <span style="color: var(--blanc);"><b>CLUB AUTO </b></span>
-                    <span style="color: var(--orange);">LE MEILLEUR DE L&apos;AUTOMOBILE</span>
-                </h1>
-            </div>
-        </div>  
-    </div> 
-</section>
-
-<section class="container-fluid d-none d-md-block a2_pub">
-    <p><span style="color: var(--blanc);"><b>CLUB&nbsp;AUTO&nbsp;</span><span style="color: var(--orange);">LE MEILLEUR DE L&apos;AUTOMOBILE</span></b></p>
-</section>
-
-<section class="container-fluid a3_entretien_clients mt-0">
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5 mb-5">
-            <img src="images/clients.jpg" width="100%" class="img-fluid mx-auto d-block" />
-        </div>
-        <div class="col-md-5">
-            <h2>BIENVENUE CHEZ <span>CLUB AUTO</span></h2>
-            <p class="lead Lorem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur ducimus
-                distinctio cumLorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <p class="lead Lorem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur ducimus
-                distinctio cumLorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-        </div>
-        <div class="col-md-1"></div>
-    </div>
-
-    <!-- Deuxième partie -->
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-5">
-            <h2>LE MEILLEUR DE L&rsquo;AUTOMOBILE</h2>
-            <p class="lead Lorem">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur ducimus
-                distinctio cumLorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                consequuntur ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing
-                elit. Vero consequuntur ducimus distinctio cumLorem ipsum dolor sit amet consectetur
-                adipisicing elit.
-            </p>
-            <p class="lead Lorem">
-                <div class="height:10px;"></div>
-                <img src="images/valid1.png" style="width:19px;" /> <span>Lorem ipsum dolor sit amet</span>      
-                <div class="height:10px;"></div>
-                <img src="images/valid1.png" style="width:19px;" /><span> Lorem ipsum dolor sit amet</span>
-                <div class="height:10px;"></div>
-                <img src="images/valid1.png" style="width:19px;" /><span> Lorem ipsum dolor sit amet</span>
-                <div class="height:10px;"></div>
-                <img src="images/valid1.png" style="width:19px" /> <span>Lorem ipsum dolor sit amet</span>
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="images/entretien.jpg" width="100%" class="img-fluid mx-auto d-block" />
-        </div>
-
-        <div class="col-md-1"></div>
-    </div>
-</section>
-
-<div class="space-between-sections"></div>
-
-<section class="container-fluid a4_chapeau">
-    <div class="row">
-        <div class="col-md-12">
-          <img src="images/chapeau.png" width="100%" class="img-fluid mx-auto d-block" />
-        </div>
-    </div>
-
-    <div class="a4_chapeau-text1">
-        <h1>Vous souhaitez louer ?</h1>
-        <p class="lead a4-lorem">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur
-            ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            consequuntur ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing
-            elit. Vero consequuntur ducimus distinctio
-        </p>
-    </div>
-
-    <div class="a4_chapeau-text2">
-    <h1>Vous souhaitez acheter ?</h1>
-    <p class="lead a4-lorem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero consequuntur
-        ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-        consequuntur ducimus distinctio cumLorem ipsum dolor sit amet consectetur adipisicing
-        elit. Vero consequuntur ducimus distinctio
-    </p>
-    </div>
-</section>
-  
-<div class="space-between-sections"></div>
-
-<section id="section-container-a5_veh_rec" class="container-fluid m-t3 a5_veh_rec"><!-- *********************************************   veh_rec  ******************************************************************************  -->
-    <div class="row">
-        <div class="col-12">
-            <div class="title-veh_rec">VEHICULES RECENTS</div>
-        </div>
-    </div>
-
+<section class="hero bg-primary text-white text-center py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12 ms-0 col-md-3"><img src="images/vehicule1.jpg" class="img-fluid" />
-                <div class="promo-text">
-                    <div class="first-word">BMW 535in NAVI</div>
-                    <div class="second-word">LEATHER, ABS</div>
-                    <div class="tab-words">
-                        <div>5 500 €</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 ms-0 col-md-3"><img src="images/vehicule1.jpg" class="img-fluid" alt="coco"/>
-                <div class="promo-text">
-                    <div class="first-word">BMW 535in NAVI</div>
-                    <div class="second-word">LEATHER, ABS</div>
-                    <div class="tab-words">
-                        <div>8 000 €</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 ms-0 col-md-3"><img src="images/vehicule1.jpg" class="img-fluid" />
-                <div class="promo-text">
-                    <div class="first-word">FORD EXPLORER 2015</div>
-                    <div class="second-word">4WD</div>
-                    <div class="tab-words">
-                        <div>-9 000 €</div>
-                        <div>8 200 €</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 ms-0 col-md-2"></div>
-        </div>
+        <h1 class="display-4">Bienvenue chez CLUB AUTO</h1>
+        <p class="lead">Votre spécialiste de la location de véhicules.</p>
+        <a href="#" class="btn btn-light btn-lg">Réservez maintenant</a>
     </div>
 </section>
 
-<div class="space-between-sections"></div>
-
-<section id="section-container-a6_nous_choisir" class="container-fluid a6_nous_choisir"><!-- ******************************************  Pourquoi nous choisir ?  ********************************************************************  -->
+<section class="container my-5">
+    <h2 class="text-center">Nos véhicules à louer</h2>
     <div class="row">
-        <div class="col-12">
-            <h1>Pourquoi nous choisir ?</h1>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="vehicle1.jpg" class="card-img-top" alt="Véhicule 1">
+                <div class="card-body">
+                    <h5 class="card-title">Véhicule 1</h5>
+                    <p class="card-text">Description du véhicule 1.</p>
+                    <a href="#" class="btn btn-primary">Réserver</a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="space-between-sections"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-1 col-gap"></div>
-            <div class="col-12 col-md-2">
-                <div class="d-flex align-items-start col-gap">
-                    <img src="images/icon1.png" width="50%" class="icon-nous-choisir img-fluid me-3" alt="Icon 1">
-                    <div>
-                        <h2>FINANCEMENT</h2>
-                        <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus. Non unde quod quas!</h3>
-                    </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="vehicle2.jpg" class="card-img-top" alt="Véhicule 2">
+                <div class="card-body">
+                    <h5 class="card-title">Véhicule 2</h5>
+                    <p class="card-text">Description du véhicule 2.</p>
+                    <a href="#" class="btn btn-primary">Réserver</a>
                 </div>
             </div>
-
-            <div class="col-12 col-md-2">
-                <div class="d-flex align-items-start col-gap">
-                    <img src="images/icon2.png" width="50%" class="icon-nous-choisir img-fluid me-3" alt="Icon 2">
-                    <div>
-                        <h2>RÉACTIVITÉ DE L’ÉQUIPE TECHNIQUE</h2>
-                        <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus. Non unde quod quas!</h3>
-                    </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="vehicle3.jpg" class="card-img-top" alt="Véhicule 3">
+                <div class="card-body">
+                    <h5 class="card-title">Véhicule 3</h5>
+                    <p class="card-text">Description du véhicule 3.</p>
+                    <a href="#" class="btn btn-primary">Réserver</a>
                 </div>
             </div>
-
-            <div class="col-12 col-md-2">
-                <div class="d-flex align-items-start col-gap">
-                    <img src="images/icon3.png" width="50%" class="icon-nous-choisir img-fluid me-3" alt="Icon 3">
-                    <div>
-                        <h2>A L’ÉCOUTE DE NOTRE CLIENTÈLE</h2>
-                        <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus. Non unde quod quas!</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-2">
-                <div class="d-flex align-items-start col-gap">
-                    <img src="images/icon4.png" width="50%" class="icon-nous-choisir img-fluid me-3" alt="Icon 4">
-                    <div>
-                        <h2>SERVICE & MAINTENANCE</h2>
-                        <h3 class="a6-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptate eum magni dolor modi possimus. Non unde quod quas!</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 col-gap"></div>
         </div>
     </div>
 </section>
 
-<div class="space-between-sections"></div>
-
-<section class="container-fluid a7_contact_nous"><!-- *****************************************  CONTACTEZ-NOUS ********************************************************************  -->
-    <h1>CONTACTEZ-NOUS</h1>
-</section>
-
-<div class="space-between-sections"></div>
-
-<section  class="container-fluid a8_veh_3">
-    <img src="./images/vehicule3.jpg" alt="Image" class="img-fluid">
-    <div class="a8_veh_3-text" style="margin-top:-150px;">
-        <h1 style="line-height: 1;padding-bottom:30px;">
-            <span style="display: block;">CLUB AUTO</span>
-            <span>VENTE ET LOCATION</span>
-        </h1>
-        <h2>
-            <p style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cupiditate dolorem, laudantium sed
-            maxime
-            commodi facere iusto, distinctio nesciunt iste accusantium doloremque alias aspernatur consequuntur
-            repellendus perferendis nulla deleniti quidem!</p>
-        </h2>
+<section class="contact bg-light py-5">
+    <div class="container text-center">
+        <h2>Contactez-nous</h2>
+        <p class="lead">N'attendez plus et contactez-nous dès maintenant pour profiter de nos offres de location exceptionnelles !</p>
+        <a href="#" class="btn btn-primary">Contactez-nous</a>
     </div>
 </section>
 
-<footer class="container-fluid mt-5">
-    <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <h6 class="mb-4"><span style="color: blue;">CLUB&nbsp;</span>
-                    <span style="color: white;">AUTO&nbsp;</span></h6>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cupiditate dolorem, laudantium sed
-                maxime
-                commodi facere iusto, distinctio nesciunt iste accusantium doloremque alias aspernatur consequuntur
-                repellendus perferendis nulla deleniti quidem!
-            </p>
+<footer class="container-fluid bg-dark text-white py-3">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>À propos</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="mb-4"><span style="color: white;">HORAIRES D&apos;OUVERTURE&nbsp;</span></h6>
-            <p>lundi-Samedi : <span style="color: white;">09:00 - 17:00&nbsp;</span> <br>
-                Dimanche et jours fériés : <span style="color: var(--blanc);">Fermée</span></p>
+        <div class="col-md-4">
+            <h4>Liens utiles</h4>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Mentions légales</a></li>
+                <li><a href="#" class="text-white">Politique de confidentialité</a></li>
+                <li><a href="#" class="text-white">Conditions d'utilisation</a></li>
+            </ul>
         </div>
-    
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="mb-4"><span style="color: red;">NEWSLETTERS&nbsp;</span></h6>
-            <div class="input-icone">
-                <input type="email" placeholder="Entrez votre email">
-                <i class="fab fa-twitter twitter" aria-hidden="true"></i>
-            </div>
-
-            <p>Inscrivez-vous pour recevoir les dernières offres</p>
+        <div class="col-md-4">
+            <h4>Contact</h4>
+            <p>Email : <a href="mailto:contact@clubauto.com" class="text-white">contact@clubauto.com</a></p>
+            <p>Téléphone : 06 95 90 74 27</p>
         </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <h6 class="mb-4"><span style="color: white;">RESEAUX SOCIAUX&nbsp;</span></h6>
-            <div>
-                <i class="fab fa-facebook-f c_IconsGAFAM"></i>
-                <i class="fab fa-twitter twitter c_IconsGAFAM"></i>
-                <i class="fa fa-instagram c_IconsGAFAM"></i>
-                <i class="fab fa-google-plus-g c_IconsGAFAM"></i>
-                <i class="fab fa-youtube c_IconsGAFAM"></i>
-                <i class="fab fa-youtube c_IconsGAFAM"></i>
-                <i class="fa-solid fa-tower-broadcast c_IconsGAFAM"></i>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-            <div class="p-4 liseret-copyright"><!-- Copyright -->
-                Copyright © 2021 <a href="accueil.html" style="text-decoration: none;">Club Auto - Tous drois réservés</a>
-                <br><br>
-            </div>
-            </div>
-        </div><!-- Copyright -->
+    </div>
+    <div class="text-center mt-3">
+        <p>&copy; 2024 CLUB AUTO. Tous droits réservés.</p>
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HK4xhTo73C3EkOKkzTSsG4TkEhnAo6bGL15s78OC1sZRbIV4m90rP7LpLUgQZn+z" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
